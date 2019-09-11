@@ -2,10 +2,6 @@
   "name": "messagesfromabottle",
   "version": "1.0.0",
   "description": "",
-  "engines": {
-    "node": "*",
-    "npm": "*"
-  },
   "main": "server.js",
   "dependencies": {
     "axios": "^0.19.0",
