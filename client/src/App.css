@@ -1,16 +1,18 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Open Sans', arial, sans-serif;
   padding-bottom: 56px;
-  margin: 0;
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(45deg, #e0e4c2, #e5e7dbf5);
+  background-color: #fffff0;
   background-attachment: fixed;
-  color: #1b0505;
+  color: #40403c;
   letter-spacing: 0.03em;
 }
 

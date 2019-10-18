@@ -1,8 +1,8 @@
 import React from 'react';
-import { Nav } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 
-const Navbar = () => (
-  <Nav
+const NavBar = () => (
+  <Navbar
     activeKey='/'
     onSelect={selectedKey => console.log(`selected ${selectedKey}`)}
     className='justify-content-between'
@@ -11,6 +11,7 @@ const Navbar = () => (
       <a
         className='navbar-brand mb-4'
         href='https://podcasts.apple.com/us/podcast/messages-from-a-bottle-podcast/id1340730783'
+        target='_blank'
       >
         <img
           src='assets/cropped-MFAB-final-art-cover.jpg'
@@ -41,7 +42,7 @@ const Navbar = () => (
         Contact Us
       </Nav.Link>
     </Nav.Item>
-  </Nav>
+  </Navbar>
 );
 
-export default Navbar;
+export default NavBar;
