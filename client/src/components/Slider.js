@@ -3,9 +3,9 @@ import { Zoom } from 'react-slideshow-image';
 
 const images = [
   'assets/mfab1.png',
-  'assets/pic2.png',
-  'assets/pic3.png',
-  'assets/pic4.png'
+  'assets/mfab2.png',
+  'assets/mfab3.png',
+  'assets/mfab4.png'
 ];
 
 const zoomOutProperties = {
@@ -24,7 +24,7 @@ const Slideshow = () => {
         {images.map((each, index) => (
           <img
             key={index}
-            style={{ width: '100%', height: '70vh' }}
+            style={{ width: '100%', height: '80vh' }}
             src={`${each}`}
           />
         ))}

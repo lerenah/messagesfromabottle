@@ -2,13 +2,10 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav
-      className='navbar navbar-light navbar-expand-sm'
-      style={{ backgroundColor: '#44bdb1' }}
-    >
-      <div className='container d-flex-justify-content-around'>
+    <nav className='navbar navbar-light navbar-expand-sm'>
+      <div className='container d-flex-justify-content-center'>
         <div
-          className='collapse navbar-collapse d-flex-justify-content-around'
+          className='collapse navbar-collapse d-flex-justify-content-center'
           id='navbarSupportedContent'
         >
           <a
