@@ -12,20 +12,20 @@ import Slider from './components/Slider';
 class App extends React.Component {
   render() {
     return (
-      <Router>
-        <React.Fragment>
+      <React.Fragment>
+        <Router>
           <Navbar></Navbar>
           <Slider></Slider>
           <div className='container'>
             <Switch>
               <Route exact path='/' component={Index} />
-              <Route exact path='/hosts' component={Hosts} />
-              <Route exact path='/message' component={Message} />
-              <Route exact path='/contact' component={Contact} />
+              <Route path='/hosts' component={Hosts} />
+              <Route path='/message' component={Message} />
+              <Route path='/contact' component={Contact} />
             </Switch>
           </div>
-        </React.Fragment>
-      </Router>
+        </Router>
+      </React.Fragment>
     );
   }
 }

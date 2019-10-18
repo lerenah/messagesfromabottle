@@ -8,14 +8,14 @@ body {
   margin: 0;
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(45deg, #dfe3f0, #b3d7fffa);
+  background: linear-gradient(45deg, #e0e4c2, #e5e7dbf5);
   background-attachment: fixed;
   color: #1b0505;
   letter-spacing: 0.03em;
 }
 
 i {
-  color: #00aaaa;
+  color: #050e0e;
   font-size: 2em;
 }
 

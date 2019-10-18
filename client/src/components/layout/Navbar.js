@@ -1,51 +1,47 @@
 import React from 'react';
+import { Nav } from 'react-bootstrap';
 
-const Navbar = () => {
-  return (
-    <nav className='navbar navbar-light navbar-expand-sm'>
-      <div className='container d-flex-justify-content-center'>
-        <div
-          className='collapse navbar-collapse d-flex-justify-content-center'
-          id='navbarSupportedContent'
-        >
-          <a
-            className='navbar-brand mb-4'
-            href='https://podcasts.apple.com/us/podcast/messages-from-a-bottle-podcast/id1340730783'
-          >
-            <img
-              src='assets/cropped-MFAB-final-art-cover.jpg'
-              width='40'
-              height='40'
-              className='d-inline-block align-top'
-              alt='logo'
-            />
-          </a>
-          <ul className='navbar-nav'>
-            <li className='nav-item active ml-5'>
-              <a className='nav-link' href='#'>
-                Home <span className='sr-only'>(current)</span>
-              </a>
-            </li>
-            <li className='nav-item active ml-5'>
-              <a className='nav-link' href='#'>
-                Meet Your Hosts
-              </a>
-            </li>
-            <li className='nav-item active ml-5'>
-              <a className='nav-link' href='#'>
-                Share Your Message
-              </a>
-            </li>
-            <li className='nav-item active ml-5'>
-              <a className='nav-link' href='#'>
-                Contact Us
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  );
-};
+const Navbar = () => (
+  <Nav
+    activeKey='/'
+    onSelect={selectedKey => console.log(`selected ${selectedKey}`)}
+    className='justify-content-between'
+  >
+    <Nav.Item>
+      <a
+        className='navbar-brand mb-4'
+        href='https://podcasts.apple.com/us/podcast/messages-from-a-bottle-podcast/id1340730783'
+      >
+        <img
+          src='assets/cropped-MFAB-final-art-cover.jpg'
+          width='40'
+          height='40'
+          className='d-inline-block align-top'
+          alt='logo'
+        />
+      </a>
+    </Nav.Item>
+    <Nav.Item>
+      <Nav.Link eventKey='/' href='/'>
+        Home
+      </Nav.Link>
+    </Nav.Item>
+    <Nav.Item>
+      <Nav.Link eventKey='/hosts' href='/hosts'>
+        Meet Your Hosts
+      </Nav.Link>
+    </Nav.Item>
+    <Nav.Item>
+      <Nav.Link eventKey='/message' href='/message'>
+        Share Your Message
+      </Nav.Link>
+    </Nav.Item>
+    <Nav.Item>
+      <Nav.Link eventKey='/contact' href='/contact'>
+        Contact Us
+      </Nav.Link>
+    </Nav.Item>
+  </Nav>
+);
 
 export default Navbar;
