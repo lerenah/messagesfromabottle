@@ -2,7 +2,7 @@ import React from 'react';
 import { Zoom } from 'react-slideshow-image';
 
 const images = [
-  'assets/pic1.png',
+  'assets/mfab1.png',
   'assets/pic2.png',
   'assets/pic3.png',
   'assets/pic4.png'
