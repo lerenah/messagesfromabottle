@@ -9,7 +9,7 @@ const Tracks = props => {
       {podcast_list.length === 0 || podcast_list.length === undefined ? (
         <Spinner></Spinner>
       ) : (
-        <React.Fragment>
+        <div className='container'>
           <h2 className='text-center mb-4'>Latest Podcast Episodes</h2>
           <div className='row'>
             {podcast_list.map(podcast => {
@@ -18,7 +18,7 @@ const Tracks = props => {
               );
             })}
           </div>
-        </React.Fragment>
+        </div>
       )}
     </div>
   );

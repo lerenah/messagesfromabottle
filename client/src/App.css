@@ -60,6 +60,12 @@ i.fa:hover {
   color: #00aa00;
 }
 
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
 td {
   border-bottom: 1px solid gray;
   padding: 10px;

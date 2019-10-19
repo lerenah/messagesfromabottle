@@ -3,6 +3,8 @@ import axios from 'axios';
 
 import Tracks from '../tracks/Tracks';
 import SingleTrack from '../tracks/SingleTrack';
+import Slider from '../Slider';
+import Quotes from './Quotes';
 
 class Index extends React.Component {
   constructor() {
@@ -42,7 +44,11 @@ class Index extends React.Component {
         {this.state.selectedPodcast.id ? (
           <SingleTrack podcast={this.state.selectedPodcast}></SingleTrack>
         ) : (
-          <Tracks podcast_list={this.state.podcast_list}></Tracks>
+          <React.Fragment>
+            <Slider></Slider>
+            <Tracks podcast_list={this.state.podcast_list}></Tracks>
+            <Quotes></Quotes>
+          </React.Fragment>
         )}
       </React.Fragment>
     );

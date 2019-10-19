@@ -7,8 +7,6 @@ import Hosts from './components/layout/Hosts';
 import Message from './components/layout/Message';
 import Contact from './components/layout/Contact';
 import Navbar from './components/layout/Navbar';
-import Slider from './components/Slider';
-import Quotes from './components/layout/Quotes';
 
 class App extends React.Component {
   render() {
@@ -16,16 +14,12 @@ class App extends React.Component {
       <React.Fragment>
         <Router>
           <Navbar></Navbar>
-          <Slider></Slider>
-          <div className='container'>
-            <Switch>
-              <Route exact path='/' component={Index} />
-              <Route path='/hosts' component={Hosts} />
-              <Route path='/message' component={Message} />
-              <Route path='/contact' component={Contact} />
-            </Switch>
-          </div>
-          <Quotes></Quotes>
+          <Switch>
+            <Route exact path='/' component={Index} />
+            <Route path='/hosts' component={Hosts} />
+            <Route path='/message' component={Message} />
+            <Route path='/contact' component={Contact} />
+          </Switch>
         </Router>
       </React.Fragment>
     );

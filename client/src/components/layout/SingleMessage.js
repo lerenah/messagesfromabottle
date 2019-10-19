@@ -1,22 +1,17 @@
 import React from 'react';
+import { Col, Image } from 'react-bootstrap';
 
 const SingleMessage = props => {
   const { name, pic, title, comment } = props.message;
   return (
-    <div className='card mb-3' style={{ maxWidth: '540px' }}>
-      <div className='row no-gutters'>
-        <div className='col-md-4'>
-          <img src={pic} className='card-img' alt='pic' />
-        </div>
-        <div className='col-md-8'>
-          <div className='card-body'>
-            <h3 className='card-title'>{name}</h3>
-            <h5 className='card-title'>{title}</h5>
-            <p className='card-text'>{comment}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Col xs={12} sm={4} className='person-wrapper'>
+      <Image src={pic} circle className='profile-pic' />
+      <h3>{name}</h3>
+      <h6>
+        <strong>{title}</strong>
+      </h6>
+      <p>{comment}</p>
+    </Col>
   );
 };
 

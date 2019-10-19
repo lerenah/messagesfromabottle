@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import SingleMessage from './SingleMessage';
 import Spinner from './Spinner';
+import { Row, Button, Container, Jumbotron } from 'react-bootstrap';
 
 class Message extends React.Component {
   constructor() {
@@ -40,22 +41,28 @@ class Message extends React.Component {
   render() {
     const { message_list } = this.state;
     return (
-      <div>
+      <div className='container'>
         {message_list.length === 0 || message_list.length === undefined ? (
           <Spinner></Spinner>
         ) : (
           <React.Fragment>
-            <h2 className='text-center mb-4'>Latest Comments</h2>
-            <div className='row'>
-              {message_list.map(message => {
-                return (
-                  <SingleMessage
-                    key={message.id}
-                    message={message}
-                  ></SingleMessage>
-                );
-              })}
-            </div>
+            <Container>
+              <Jumbotron>
+                <h2>What's Your Message for the Bottle</h2>
+                <p>Leave us a message, share your thoughts here!</p>
+                <Button bsStyle='primary'>Share Your Message</Button>
+              </Jumbotron>
+              <Row className='show-grid text-center'>
+                {message_list.map(message => {
+                  return (
+                    <SingleMessage
+                      key={message.id}
+                      message={message}
+                    ></SingleMessage>
+                  );
+                })}
+              </Row>
+            </Container>
           </React.Fragment>
         )}
       </div>
