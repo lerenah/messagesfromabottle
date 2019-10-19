@@ -10,10 +10,16 @@ body {
   padding-bottom: 56px;
   height: 100vh;
   width: 100vw;
-  background-color: #fffff0;
+  background-color: rgba(17, 25, 51, 0.4);
   background-attachment: fixed;
-  color: #40403c;
+  color: #050e0e;
   letter-spacing: 0.03em;
+}
+
+a {
+  font-family: 'Verdana';
+  color: #fbeec1;
+  font-size: 15px;
 }
 
 i {

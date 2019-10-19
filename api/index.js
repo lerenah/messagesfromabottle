@@ -4,7 +4,7 @@ const router = require('express').Router();
 const Podcast = require('../db/podcast');
 const Message = require('../db/messages');
 
-// Albums routes
+// All Podcast route
 router.get('/podcast', async (req, res, next) => {
   try {
     const allPodcasts = await Podcast.findAll();
@@ -14,14 +14,40 @@ router.get('/podcast', async (req, res, next) => {
   }
 });
 
-router.get('/podcast/add', async (req, res, next) => {
+// Get Single Podcast
+router.get('/podcast/:podcastId', async (req, res, next) => {
   try {
-    const data = {
-      name: 'Rick',
-      title: 'We are on our way!',
-      comment: 'What is your message for the bottle'
-    };
+    const singlePodcast = await Podcast.findById(req.params.podcastId);
+    res.send(singlePodcast);
+  } catch (err) {
+    next(err);
+  }
+});
 
+// Gets all messages
+router.get('/message', async (req, res, next) => {
+  try {
+    const allMessages = await Message.findAll();
+    res.send(allMessages);
+  } catch (err) {
+    next(err);
+  }
+});
+
+// Get Single Message
+router.get('/message/:messageId', async (req, res, next) => {
+  try {
+    const singleMessage = await Message.findById(req.params.messageId);
+    res.send(singleMessage);
+  } catch (err) {
+    next(err);
+  }
+});
+
+// Add Single Message
+router.post('/message/add', async (req, res, next) => {
+  try {
+    const data = req.body.data;
     let { name, title, comment } = data;
     await Message.create({
       name,
@@ -32,15 +58,6 @@ router.get('/podcast/add', async (req, res, next) => {
     res.redirect('/podcast');
   } catch (err) {
     console.error(err);
-  }
-});
-
-router.get('/podcast/:podcastId', async (req, res, next) => {
-  try {
-    const singlePodcast = await Podcast.findById(req.params.podcastId);
-    res.send(singlePodcast);
-  } catch (err) {
-    next(err);
   }
 });
 

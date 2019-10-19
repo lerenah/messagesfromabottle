@@ -10,10 +10,12 @@ const Tracks = props => {
         <Spinner></Spinner>
       ) : (
         <React.Fragment>
-          <h2 className='text-center mb-4'>Latest Episodes</h2>
+          <h2 className='text-center mb-4'>Latest Podcast Episodes</h2>
           <div className='row'>
             {podcast_list.map(podcast => {
-              return <SingleTrack key={podcast.id} podcast={podcast}></SingleTrack>;
+              return (
+                <SingleTrack key={podcast.id} podcast={podcast}></SingleTrack>
+              );
             })}
           </div>
         </React.Fragment>

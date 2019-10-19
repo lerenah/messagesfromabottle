@@ -1,11 +1,11 @@
 import React from 'react';
-import { Zoom } from 'react-slideshow-image';
+import { Slide } from 'react-slideshow-image';
 
 const images = [
   'assets/mfab1.png',
-  'assets/mfab2.png',
-  'assets/mfab3.png',
-  'assets/mfab4.png'
+  'assets/test2.jpg',
+  'assets/test3.jpg',
+  'assets/test1.jpg'
 ];
 
 const zoomOutProperties = {
@@ -14,13 +14,13 @@ const zoomOutProperties = {
   infinite: true,
   indicators: true,
   scale: 0.4,
-  arrows: true
+  arrows: false
 };
 
 const Slideshow = () => {
   return (
-    <div className='slide'>
-      <Zoom {...zoomOutProperties}>
+    <div className='slide' style={{ marginTop: 0 }}>
+      <Slide {...zoomOutProperties}>
         {images.map((each, index) => (
           <img
             key={index}
@@ -28,7 +28,7 @@ const Slideshow = () => {
             src={`${each}`}
           />
         ))}
-      </Zoom>
+      </Slide>
     </div>
   );
 };
