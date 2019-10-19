@@ -7,6 +7,7 @@ const Message = require('../db/messages');
 // All Podcast route
 router.get('/podcast', async (req, res, next) => {
   try {
+    console.log('made it to podcast route');
     const allPodcasts = await Podcast.findAll();
     res.send(allPodcasts);
   } catch (err) {
@@ -27,9 +28,11 @@ router.get('/podcast/:podcastId', async (req, res, next) => {
 // Gets all messages
 router.get('/message', async (req, res, next) => {
   try {
+    console.log('made it to message route in try block');
     const allMessages = await Message.findAll();
     res.send(allMessages);
-  } catch (err) {
+  } catch ( err ) {
+    console.log('made it to message route in err');
     next(err);
   }
 });

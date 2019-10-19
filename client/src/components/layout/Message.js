@@ -1,50 +1,64 @@
 import React from 'react';
 import axios from 'axios';
 
-import Tracks from '../tracks/Tracks';
-import SingleTrack from '../tracks/SingleTrack';
+import SingleMessage from './SingleMessage';
+import Spinner from './Spinner';
 
 class Message extends React.Component {
   constructor() {
     super();
-    this.state = { podcast_list: [], selectedPodcast: {} };
-    this.selectPodcast = this.selectPodcast.bind(this);
-    this.deselectPodcast = this.deselectPodcast.bind(this);
+    this.state = { message_list: [], selectedMessage: {} };
+    this.selectMessage = this.selectMessage.bind(this);
+    this.deselectMessage = this.deselectMessage.bind(this);
   }
 
   async componentDidMount() {
     try {
-      let { data } = await axios.get('/podcast');
+      let { data } = await axios.get('/message');
       console.log(data, ' is DATA');
-      this.setState({ podcast_list: data });
+      this.setState({ message_list: data });
+      console.log(this.state.message_list, ' is LIST');
     } catch (err) {
       console.log(err, ' is err');
     }
   }
 
-  selectPodcast(podcastId) {
+  selectMessage(messageId) {
     return async () => {
-      const { data } = await axios.get(`/podcast/${podcastId}`);
+      const { data } = await axios.get(`/message/${messageId}`);
       this.setState({
-        selectedPodcast: data
+        selectedMessage: data
       });
     };
   }
-  deselectPodcast() {
+  deselectMessage() {
     this.setState({
-      selectedPodcast: {}
+      selectedMessage: {}
     });
   }
 
   render() {
+    const { message_list } = this.state;
     return (
-      <React.Fragment>
-        {this.state.selectedPodcast.id ? (
-          <SingleTrack podcast={this.state.selectedPodcast}></SingleTrack>
+      <div>
+        {message_list.length === 0 || message_list.length === undefined ? (
+          <Spinner></Spinner>
         ) : (
-          <Tracks podcast_list={this.state.podcast_list}></Tracks>
+          <React.Fragment>
+            <h2 className='text-center mb-4'>Latest Comments</h2>
+            <div className='row'>
+              {message_list.map(message => {
+                return (
+                  <SingleMessage
+                    key={message.id}
+                    message={message}
+                  ></SingleMessage>
+                );
+              })}
+            </div>
+          </React.Fragment>
         )}
-      </React.Fragment>
+      </div>
     );
   }
 }
