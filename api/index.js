@@ -31,7 +31,7 @@ router.get('/message', async (req, res, next) => {
     console.log('made it to message route in try block');
     const allMessages = await Message.findAll();
     res.send(allMessages);
-  } catch ( err ) {
+  } catch (err) {
     console.log('made it to message route in err');
     next(err);
   }
@@ -51,14 +51,15 @@ router.get('/message/:messageId', async (req, res, next) => {
 router.post('/message/add', async (req, res, next) => {
   try {
     const data = req.body.data;
-    let { name, title, comment } = data;
+    let { name, title, comment, pic } = data;
     await Message.create({
       name,
       title,
-      comment
+      comment,
+      pic
     });
     console.log('message created');
-    res.redirect('/podcast');
+    res.redirect('/message');
   } catch (err) {
     console.error(err);
   }

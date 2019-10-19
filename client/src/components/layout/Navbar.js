@@ -43,6 +43,15 @@ const NavBar = () => (
         Contact Us
       </Nav.Link>
     </Nav.Item>
+    <Nav.Item>
+      <Nav.Link
+        href='https://podcasts.apple.com/us/podcast/messages-from-a-bottle-podcast/id1340730783'
+        target='_blank'
+        className='btn btn-danger'
+      >
+        Subscribe
+      </Nav.Link>
+    </Nav.Item>
   </Navbar>
 );
 

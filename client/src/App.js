@@ -8,6 +8,7 @@ import Message from './components/layout/Message';
 import Contact from './components/layout/Contact';
 import Navbar from './components/layout/Navbar';
 import Slider from './components/Slider';
+import Quotes from './components/layout/Quotes';
 
 class App extends React.Component {
   render() {
@@ -24,6 +25,7 @@ class App extends React.Component {
               <Route path='/contact' component={Contact} />
             </Switch>
           </div>
+          <Quotes></Quotes>
         </Router>
       </React.Fragment>
     );

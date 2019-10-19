@@ -24,13 +24,6 @@ const SingleTrack = props => {
             ></iframe>
           </p>
           <img src={artworkUrl} className='card-img-bottom' alt='pic' />
-          <hr/>
-          <a
-            href='https://podcasts.apple.com/us/podcast/messages-from-a-bottle-podcast/id1340730783'
-            className='btn btn-danger'
-          >
-            Subscribe
-          </a>
         </div>
       </div>
     </div>
