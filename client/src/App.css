@@ -19,7 +19,11 @@ body {
 a {
   font-family: 'Verdana';
   color: #fbeec1;
-  font-size: 15px;
+  font-size: 11px;
+}
+
+a:hover {
+  color: #bd0606;
 }
 
 i {
@@ -64,6 +68,17 @@ i.fa:hover {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+}
+
+.header-image {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.about-profile-pic {
+  float: left;
+  margin: 0 1em 1em 0;
+
 }
 
 td {

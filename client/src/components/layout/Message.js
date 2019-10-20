@@ -15,7 +15,7 @@ class Message extends React.Component {
 
   async componentDidMount() {
     try {
-      let { data } = await axios.get('/message');
+      let { data } = await axios.get('/api/message');
       console.log(data, ' is DATA');
       this.setState({ message_list: data });
       console.log(this.state.message_list, ' is LIST');
@@ -26,7 +26,7 @@ class Message extends React.Component {
 
   selectMessage(messageId) {
     return async () => {
-      const { data } = await axios.get(`/message/${messageId}`);
+      const { data } = await axios.get(`/api/message/${messageId}`);
       this.setState({
         selectedMessage: data
       });

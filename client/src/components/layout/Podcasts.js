@@ -3,11 +3,9 @@ import axios from 'axios';
 
 import Tracks from '../tracks/Tracks';
 import SingleTrack from '../tracks/SingleTrack';
-import Slider from '../Slider';
 import Quotes from './Quotes';
-import Spinner from './Spinner'
 
-class Index extends React.Component {
+class Podcasts extends React.Component {
   constructor() {
     super();
     this.state = { podcast_list: [], selectedPodcast: {} };
@@ -42,19 +40,17 @@ class Index extends React.Component {
   render() {
     return (
       <React.Fragment>
-       <Slider/>
-       <div className='container'>
-       {this.state.podcast_list.length ? (
-         <React.Fragment>
-       <h3>Newest Episode</h3>
-       <SingleTrack podcast={this.state.podcast_list[0]}></SingleTrack></React.Fragment>) : <Spinner/>
-       }
-       </div>
-
-<Quotes/>
+        {this.state.selectedPodcast.id ? (
+          <SingleTrack podcast={this.state.selectedPodcast}></SingleTrack>
+        ) : (
+          <React.Fragment>
+            <Tracks podcast_list={this.state.podcast_list}></Tracks>
+            <Quotes></Quotes>
+          </React.Fragment>
+        )}
       </React.Fragment>
     );
   }
 }
 
-export default Index;
+export default Podcasts;

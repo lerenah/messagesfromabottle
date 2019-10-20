@@ -14,7 +14,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/', require('./api/index'));
+app.use('/api', require('./api'));
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {

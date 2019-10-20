@@ -29,6 +29,11 @@ const NavBar = () => (
       </Nav.Link>
     </Nav.Item>
     <Nav.Item>
+      <Nav.Link eventKey='/allpodcasts' href='/allpodcasts'>
+        Podcast Episodes
+      </Nav.Link>
+    </Nav.Item>
+    <Nav.Item>
       <Nav.Link eventKey='/hosts' href='/hosts'>
         Meet Your Hosts
       </Nav.Link>
