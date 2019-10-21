@@ -7,6 +7,7 @@ import Hosts from './components/layout/Hosts';
 import Message from './components/layout/Message';
 import Contact from './components/layout/Contact';
 import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 import Podcasts from './components/layout/Podcasts';
 
 class App extends React.Component {
@@ -22,6 +23,7 @@ class App extends React.Component {
             <Route path='/message' component={Message} />
             <Route path='/contact' component={Contact} />
           </Switch>
+          <Footer></Footer>
         </Router>
       </React.Fragment>
     );

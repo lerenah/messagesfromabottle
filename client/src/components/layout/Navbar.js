@@ -5,8 +5,13 @@ const NavBar = () => (
   <Navbar
     activeKey='/'
     onSelect={selectedKey => console.log(`selected ${selectedKey}`)}
-    className='justify-content-between'
-    style={{ backgroundColor: 'rgba(79, 73, 137, 0.7)', marginBottom: 0 }}
+    className='justify-content-between position-absolute position-fixed'
+    style={{
+      backgroundColor: 'rgb(79, 73, 137)',
+      marginBottom: 0,
+      zIndex: 9,
+      width: '100vw'
+    }}
   >
     <Nav.Item>
       <a
@@ -52,7 +57,7 @@ const NavBar = () => (
       <Nav.Link
         href='https://podcasts.apple.com/us/podcast/messages-from-a-bottle-podcast/id1340730783'
         target='_blank'
-        className='btn btn-danger'
+        className='btn btn-info'
       >
         Subscribe
       </Nav.Link>
