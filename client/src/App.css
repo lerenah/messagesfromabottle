@@ -10,7 +10,7 @@ body {
   padding-bottom: 56px;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(17, 25, 51, 0.4);
+  background-color: rgba(13, 126, 146, 0.4);
   background-attachment: fixed;
   color: #050e0e;
   letter-spacing: 0.03em;
@@ -72,13 +72,11 @@ i.fa:hover {
 
 .header-image {
   width: 100%;
-  margin-bottom: 2em;
 }
 
 .about-profile-pic {
   float: left;
   margin: 0 1em 1em 0;
-
 }
 
 td {

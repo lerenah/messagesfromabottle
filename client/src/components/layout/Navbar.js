@@ -6,7 +6,7 @@ const NavBar = () => (
     activeKey='/'
     onSelect={selectedKey => console.log(`selected ${selectedKey}`)}
     className='justify-content-between'
-    style={{ backgroundColor: 'rgba(17, 25, 51, 0.6)', marginBottom: 0 }}
+    style={{ backgroundColor: 'rgba(79, 73, 137, 0.7)', marginBottom: 0 }}
   >
     <Nav.Item>
       <a
