@@ -81,11 +81,13 @@ i.fa:hover {
 
 .footer-middle {
   padding-top: 3rem;
+  color: 'white';
 }
 
 .footer-bottom {
   padding-top: 3rem;
   padding-bottom: 2rem;
+  color: 'white';
 }
 
 td {
