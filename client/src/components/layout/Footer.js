@@ -81,13 +81,13 @@ class Footer extends React.Component {
                     <ul className='list-unstyled'>
                       <a href='mailto:messagesfromabottle@outlook.com'>
                         <i class='fas fa-envelope-open'></i>
-                        messagesfromabottle@outlook.com
+                        &nbsp;messagesfromabottle@outlook.com
                       </a>
 
                       <li>
                         <a href='http://www.converstionsforyourhigherself.com'>
                           <i class='fas fa-globe-americas'></i>
-                          messagesfromabottle.com
+                          &nbsp;messagesfromabottle.com
                         </a>
                       </li>
                     </ul>

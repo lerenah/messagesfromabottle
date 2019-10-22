@@ -5,7 +5,7 @@ const NavBar = () => (
   <Navbar
     activeKey='/'
     onSelect={selectedKey => console.log(`selected ${selectedKey}`)}
-    className='justify-content-between position-absolute position-fixed'
+    className='justify-content-between'
     style={{
       backgroundColor: 'rgb(79, 73, 137)',
       marginBottom: 0,
