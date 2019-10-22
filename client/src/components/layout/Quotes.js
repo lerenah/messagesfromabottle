@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Quotes() {
   return (
-    <div style={{ backgroundColor: '#fcf9ed' }}>
+    <div style={{ backgroundColor: 'rgb(252, 252, 250)' }}>
       <div className='container' style={{ padding: 20 }}>
         <div className='row'>
           <div className='col-sm text-center'>

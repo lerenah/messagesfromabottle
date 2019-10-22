@@ -95,6 +95,14 @@ td {
   padding: 10px;
 }
 
+hr {
+  width: 60%;
+  text-align: center;
+  box-shadow: 0 0 10px 1px rgb(170, 223, 224);
+  border: 0;
+  height: 0;
+}
+
 /* ids */
 #app {
   height: 100%;
