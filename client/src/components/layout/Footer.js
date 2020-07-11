@@ -23,12 +23,11 @@ class Footer extends React.Component {
         <div
           style={{
             height: '90vh',
-            background: `url('https://images.pexels.com/photos/292426/pexels-photo-292426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')`,
+            background: `url("https://images.pexels.com/photos/292426/pexels-photo-292426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")`,
             backgroundSize: 'cover',
             position: 'relative',
             top: 0,
-            bottom: 0,
-            zIndex: -10
+            bottom: 0
           }}
         >
           <div
@@ -37,16 +36,14 @@ class Footer extends React.Component {
               backgroundColor: 'rgba(0,0,0,0.5)',
               position: 'relative',
               top: 0,
-              bottom: 0,
-              zIndex: -5
+              bottom: 0
             }}
           >
             <div
               style={{
                 height: '90vh',
                 top: 0,
-                bottom: 0,
-                zIndex: 9
+                bottom: 0
               }}
             >
               <Container className='footer-middle' style={{ color: '#fcf9ed' }}>
@@ -68,7 +65,7 @@ class Footer extends React.Component {
                       </li>
                       <li>
                         <a
-                          href='https://podcasts.apple.com/us/podcast/messages-from-a-bottle-podcast/id1340730783'
+                          href="https://podcasts.apple.com/us/podcast/messages-from-a-bottle-podcast/id1340730783"
                           target='_blank'
                         >
                           Listen Today
@@ -85,7 +82,7 @@ class Footer extends React.Component {
                       </a>
 
                       <li>
-                        <a href='http://www.converstionsforyourhigherself.com'>
+                        <a href='http://www.messagesfromabottle.herokuapp.com'>
                           <i class='fas fa-globe-americas'></i>
                           &nbsp;messagesfromabottle.com
                         </a>

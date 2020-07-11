@@ -48,7 +48,7 @@ router.get('/message/:messageId', async (req, res, next) => {
 });
 
 // Add Single Message
-router.post('/message/add', async (req, res, next) => {
+router.post('/messageAdd', async (req, res, next) => {
   try {
     const data = req.body.data;
     let { name, title, comment, pic } = data;
@@ -65,8 +65,9 @@ router.post('/message/add', async (req, res, next) => {
   }
 });
 
-router.post('/podcast/admin', async (req, res, next) => {
+router.post('/podcastAdmin', async (req, res, next) => {
   try {
+    console.log('Made it to the podcastAdmin route');
     const data = req.body.data;
 
     let { name, artworkUrl, audioUrl } = data;

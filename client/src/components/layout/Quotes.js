@@ -7,6 +7,7 @@ export default function Quotes() {
         <div className='row'>
           <div className='col-sm text-center'>
             <img
+              id="one"
               src='assets/quotes1.jpg'
               alt='pic'
               style={{ height: 100, width: 100 }}
@@ -21,6 +22,7 @@ export default function Quotes() {
           </div>
           <div className='col-sm text-center'>
             <img
+              id="two"
               src='assets/quotes2.jpg'
               alt='pic'
               style={{ height: 100, width: 100 }}
@@ -35,6 +37,7 @@ export default function Quotes() {
           </div>
           <div className='col-sm text-center'>
             <img
+              id="three"
               src='assets/quotes3.jpg'
               alt='pic'
               style={{ height: 100, width: 100 }}
@@ -49,6 +52,7 @@ export default function Quotes() {
           </div>
           <div className='col-sm text-center'>
             <img
+              id="four"
               src='assets/quotes4.jpg'
               alt='pic'
               style={{ height: 100, width: 100 }}
@@ -56,7 +60,7 @@ export default function Quotes() {
             <div className='text-center'>
               <h4>Confucius</h4>
               <p>
-                "They must often cahnge who would be constant in happiness or
+                "They must often change who would be constant in happiness or
                 wisdom."
               </p>
             </div>
