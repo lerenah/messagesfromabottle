@@ -268,27 +268,57 @@ h3 {
 }
 
 #one {
-  animation: breathe 4.1s infinite;
+  animation: breathe 7.1s ease-out infinite normal;
 }
 #two {
-  animation: breathe 3.5s infinite;
+  animation: breathe 5.5s ease-out infinite normal;
 }
 #three {
-  animation: breathe 2.8s infinite;
+  animation: breathe 6.8s ease-out infinite normal;
 }
 #four {
-  animation: breathe 2.5s infinite;
+  animation: breathe 6.5s ease-out infinite normal;
+}
+#subscribe {
+  animation: breathe 6.5s ease-out infinite normal;
 }
 
 
-@keyframes breathe {
+/* @keyframes breathe {
   from {
     transform: scale(1);
   }
   to {
     transform: scale(1.2);
   }
+} */
+
+@keyframes breathe {
+  0% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
 }
+
 
 /* .App {
   text-align: center;
