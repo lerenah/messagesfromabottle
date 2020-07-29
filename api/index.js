@@ -18,7 +18,7 @@ router.get('/podcast', async (req, res, next) => {
 // Get Single Podcast
 router.get('/podcast/:podcastId', async (req, res, next) => {
   try {
-    const singlePodcast = await Podcast.findById(req.params.podcastId);
+    const singlePodcast = await Podcast.findByPk(req.params.podcastId);
     res.send(singlePodcast);
   } catch (err) {
     next(err);

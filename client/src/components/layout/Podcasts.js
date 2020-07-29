@@ -45,7 +45,6 @@ class Podcasts extends React.Component {
         ) : (
           <React.Fragment>
             <Tracks podcast_list={this.state.podcast_list}></Tracks>
-            <Quotes></Quotes>
           </React.Fragment>
         )}
       </React.Fragment>

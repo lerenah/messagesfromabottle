@@ -45,7 +45,6 @@ const Hosts = () => (
       className='header-image'
       style={{ height: 400 }}
     />
-    <Quotes />
   </div>
 );
 

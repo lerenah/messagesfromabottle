@@ -43,6 +43,7 @@ class Index extends React.Component {
     return (
       <React.Fragment>
        <Slider/>
+       <div>
        <div className='container'>
        {this.state.podcast_list.length ? (
          <React.Fragment>
@@ -52,6 +53,7 @@ class Index extends React.Component {
        </div>
 
 <Quotes/>
+       </div>
       </React.Fragment>
     );
   }

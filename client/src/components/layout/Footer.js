@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import { Container, Col, Row, Image } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+
 
 class Footer extends React.Component {
   constructor() {
@@ -77,13 +79,13 @@ class Footer extends React.Component {
                     <h4>Messages From A Bottle</h4>
                     <ul className='list-unstyled'>
                       <a href='mailto:messagesfromabottle@outlook.com'>
-                        <i class='fas fa-envelope-open'></i>
+                        <i className='fas fa-envelope-open'></i>
                         &nbsp;messagesfromabottle@outlook.com
                       </a>
 
                       <li>
                         <a href='http://www.messagesfromabottle.herokuapp.com'>
-                          <i class='fas fa-globe-americas'></i>
+                          <i className='fas fa-globe-americas'></i>
                           &nbsp;messagesfromabottle.com
                         </a>
                       </li>
@@ -95,7 +97,7 @@ class Footer extends React.Component {
                       {this.state.podcast_list.map(podcast => {
                         return (
                           <li key={podcast.id}>
-                            <small>{podcast.name}</small>
+                            <Link to={`/allPodcasts/${podcast.id}`}><small>{podcast.name}</small></Link>
                             <hr />
                           </li>
                         );
@@ -117,6 +119,11 @@ class Footer extends React.Component {
                           src='assets/mixed.jpeg'
                           style={{ height: 80, width: 80, marginBottom: 6 }}
                         />
+                        <a
+                          href="https://podcasts.apple.com/us/podcast/messages-from-a-bottle-podcast/id1340730783"
+                          target='_blank'
+                        >
+                        </a>
                       </li>
                       <li style={{ flexBasis: '33%' }}>
                         <Image

@@ -9,6 +9,7 @@ import Contact from './components/layout/Contact';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Podcasts from './components/layout/Podcasts';
+import TrackDetail from './components/tracks/TrackDetail';
 
 class App extends React.Component {
   render() {
@@ -22,6 +23,7 @@ class App extends React.Component {
             <Route path='/hosts' component={Hosts} />
             <Route path='/message' component={Message} />
             <Route path='/contact' component={Contact} />
+            <Route path='/allPodcasts/:podcastId' component={TrackDetail} />
           </Switch>
           <Footer></Footer>
         </Router>
