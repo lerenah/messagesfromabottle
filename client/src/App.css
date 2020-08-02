@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,19 +6,20 @@
 }
 
 body {
-  font-family: 'Verdana', arial, sans-serif;
+  font-family: "Verdana", arial, sans-serif;
   padding-bottom: 56px;
   height: 100vh;
   width: 100vw;
   /* background-color: rgba(13, 126, 146, 0.4); */
-  background: url("https://media.cntraveler.com/photos/56ce169069d8fae9411b060f/master/pass/message-in-a-bottle-cr-getty.jpg?auto=compress&cs=tinysrgb&dpr=2&h=450&w=1000") no-repeat center center fixed;
+  background: url("https://media.cntraveler.com/photos/56ce169069d8fae9411b060f/master/pass/message-in-a-bottle-cr-getty.jpg?auto=compress&cs=tinysrgb&dpr=2&h=450&w=1000")
+    no-repeat center center fixed;
   background-attachment: fixed;
   color: #050e0e;
   letter-spacing: 0.03em;
 }
 
 a {
-  font-family: 'Verdana';
+  font-family: "Verdana";
   color: #fbeec1;
   font-size: 11px;
 }
@@ -81,15 +81,72 @@ i.fa:hover {
   margin: 0 1em 1em 0;
 }
 
+/*** FOOTER ***/
+.main-footer {
+  height: "90vh";
+  background: url("https://images.pexels.com/photos/292426/pexels-photo-292426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: "cover";
+  position: "relative";
+  top: 0;
+  bottom: 0;
+}
+
+.footer-overlay {
+  height: "90vh";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: "relative";
+  top: 0;
+  bottom: 0;
+}
+
 .footer-middle {
   padding-top: 3rem;
-  color: 'white';
+  color: "white";
 }
 
 .footer-bottom {
   padding-top: 3rem;
   padding-bottom: 2rem;
-  color: 'white';
+  color: "white";
+}
+
+.footer-img {
+  height: auto;
+  width: 100%;
+}
+
+@media only screen and (max-width: 575px) {
+  .footer-img {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+.list-item {
+  word-break: break-all;
+}
+
+.icon-text {
+  padding-left: 8px;
+}
+
+.latest-message {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-basis {
+  flex-basis: 33%;
+}
+
+.latest-message__img {
+  height: 80px;
+  width: 80px;
+}
+
+.margin-bottom {
+  margin-bottom: 6px;
 }
 
 td {
@@ -311,109 +368,106 @@ h3 {
   }
 }
 
-
-@media only screen and  (
-  max-width: 320px
-)
-{
+@media only screen and (max-width: 320px) {
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0px;
     box-sizing: border-box;
   }
-  
+
   body {
-    font-family: 'Verdana', arial, sans-serif;
+    font-family: "Verdana", arial, sans-serif;
     padding-bottom: 56px;
     height: 100vh;
     width: 100vw;
     /* background-color: rgba(13, 126, 146, 0.4); */
-    background: url("https://media.cntraveler.com/photos/56ce169069d8fae9411b060f/master/pass/message-in-a-bottle-cr-getty.jpg?auto=compress&cs=tinysrgb&dpr=2&h=450&w=1000") no-repeat center center fixed;
+    background: url("https://media.cntraveler.com/photos/56ce169069d8fae9411b060f/master/pass/message-in-a-bottle-cr-getty.jpg?auto=compress&cs=tinysrgb&dpr=2&h=450&w=1000")
+      no-repeat center center fixed;
     background-attachment: fixed;
     color: #050e0e;
     letter-spacing: 0.03em;
   }
 
   a {
-    font-family: 'Verdana';
+    font-family: "Verdana";
     color: #fbeec1;
     font-size: 11px;
   }
-  
+
   a:hover {
     color: #bd0606;
   }
-  
+
   i {
     color: #050e0e;
     font-size: 2em;
   }
-  
+
   p {
     font-size: 14px;
     margin: 0;
   }
-  
+
   small {
     font-size: 12px;
     color: darkgray;
   }
-  
+
   table {
     border-collapse: collapse;
     width: 100%;
   }
-  
+
   table tr:hover {
     background-color: #333;
   }
-  
+
   table tr.active {
     background-color: #333;
   }
-  
+
   i.fa {
     cursor: pointer;
     font-size: 2em;
     transition: color 0.2s ease;
   }
-  
+
   i.fa:hover {
     color: #00aa00;
   }
-  
+
   .profile-pic {
     width: 200px;
     height: 200px;
     border-radius: 50%;
   }
-  
+
   .header-image {
     width: 100%;
   }
-  
+
   .about-profile-pic {
     float: left;
     margin: 0 1em 1em 0;
   }
-  
+
   .footer-middle {
     padding-top: 3rem;
-    color: 'white';
+    color: "white";
   }
-  
+
   .footer-bottom {
     padding-top: 3rem;
     padding-bottom: 2rem;
-    color: 'white';
+    color: "white";
   }
-  
+
   td {
     border-bottom: 1px solid gray;
     padding: 10px;
   }
-  
+
   hr {
     width: 60%;
     text-align: center;
@@ -421,54 +475,54 @@ h3 {
     border: 0;
     height: 0;
   }
-  
+
   /* ids */
   #app {
     height: 100%;
     width: 100%;
     overflow: scroll;
   }
-  
+
   #albums {
     margin: 2em;
   }
-  
+
   #logo {
     max-height: 100px;
     max-width: 100px;
   }
-  
+
   #main > div.container {
     margin-left: 150px;
   }
-  
+
   #player-container {
     position: fixed;
     height: 56px;
     width: 100%;
     bottom: 0;
   }
-  
+
   #player-controls {
     background-color: #333;
     box-shadow: 0px -2px 2px #5a5a5a;
     height: 100%;
   }
-  
+
   #player-controls > div {
     height: 100%;
     align-items: center;
   }
-  
+
   #player-controls i {
     font-size: 2em;
     padding: 0 0.5em;
   }
-  
+
   #player-controls i:nth-child(2) {
     font-size: 3em;
   }
-  
+
   #sidebar {
     min-width: 150px;
     height: 100%;
@@ -477,63 +531,63 @@ h3 {
     text-align: center;
     position: fixed;
   }
-  
+
   #sidebar img {
     padding-top: 10px;
   }
-  
+
   #sidebar section {
     text-align: left;
     padding-left: 10px;
   }
-  
+
   #sidebar a {
     transition: border 0.2s ease;
     cursor: pointer;
   }
-  
+
   #sidebar a:hover {
     border-bottom: 2px solid #00aaaa;
   }
-  
+
   /* classes */
   .album {
     margin: 1em;
   }
-  
+
   .album img {
     height: 200px;
     width: 200px;
     transition: box-shadow 0.5s ease;
     border-radius: 3px;
   }
-  
+
   .album img:hover {
     box-shadow: 2px 2px 2px #5a5a5a;
   }
-  
+
   .center {
     justify-content: center;
   }
-  
+
   .column {
     display: flex;
     flex-direction: column;
   }
-  
+
   .container {
     height: 100%;
     width: 100%;
   }
-  
+
   .gray {
     color: gray;
   }
-  
+
   .wrap {
     flex-wrap: wrap;
   }
-  
+
   .row {
     display: flex;
     flex-direction: row;
@@ -555,11 +609,11 @@ h3 {
     width: 70%;
     margin: auto;
   }
-  
+
   h3 {
     text-align: center;
   }
-  
+
   .each-slide > div {
     display: flex;
     align-items: center;
@@ -567,27 +621,27 @@ h3 {
     background-size: cover;
     height: 300px;
   }
-  
+
   .each-slide span {
     padding: 20px;
     font-size: 20px;
     background: #efefef;
     text-align: center;
   }
-  
+
   .each-fade {
     display: flex;
   }
-  
+
   .each-fade .image-container {
     width: 75%;
     overflow: hidden;
   }
-  
+
   .each-fade .image-container img {
     width: 100%;
   }
-  
+
   .each-fade h2 {
     width: 25%;
     display: flex;
@@ -596,7 +650,7 @@ h3 {
     margin: 0;
     background: #adceed;
   }
-  
+
   #one {
     animation: breathe 7.1s ease-out infinite normal;
   }
@@ -612,8 +666,7 @@ h3 {
   #subscribe {
     animation: breathe 6.5s ease-out infinite normal;
   }
-  
-  
+
   /* @keyframes breathe {
     from {
       transform: scale(1);
@@ -622,31 +675,30 @@ h3 {
       transform: scale(1.2);
     }
   } */
-  
+
   @keyframes breathe {
     0% {
       -webkit-transform: scale(0.9);
       -ms-transform: scale(0.9);
       transform: scale(0.9);
     }
-  
+
     25% {
       -webkit-transform: scale(1);
       -ms-transform: scale(1);
       transform: scale(1);
     }
-  
+
     60% {
       -webkit-transform: scale(0.9);
       -ms-transform: scale(0.9);
       transform: scale(0.9);
     }
-  
+
     100% {
       -webkit-transform: scale(0.9);
       -ms-transform: scale(0.9);
       transform: scale(0.9);
     }
   }
-  
 }
