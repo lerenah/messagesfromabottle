@@ -39,11 +39,11 @@ class Podcasts extends React.Component {
 
   render() {
     return (
-      <>
+      <div style={{ paddingTop: "77px" }}>
         {this.state.podcast_list && (
           <Tracks podcast_list={this.state.podcast_list} />
         )}
-      </>
+      </div>
       // <React.Fragment>
       //   {this.state.selectedPodcast.id ? (
       //     <SingleTrack podcast={this.state.selectedPodcast}></SingleTrack>

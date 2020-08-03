@@ -30,9 +30,9 @@ const Contact = () => {
   };
 
   return (
-    <div className="my-5 py-5">
+    <div style={{ paddingTop: "77px" }}>
       <div className="container">
-        <div className="well well-sm">
+        <div className="well well-sm" style={{ marginTop: "5%" }}>
           <Row>
             <Col>
               <Image

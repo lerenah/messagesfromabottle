@@ -28,40 +28,40 @@ const NavBar = () => (
     />
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="mr-auto navbar-header__list">
-        <Nav.Link href="/" className="navbar-header__link" eventKey="/">
+        <Nav.Link eventKey="/" href="/" className="navbar-header__link">
           Home
         </Nav.Link>
         <Nav.Link
+          eventKey="/allpodcasts"
           href="/allpodcasts"
           className="navbar-header__link"
-          eventKey="/allpodcasts"
         >
           Podcast Episodes
         </Nav.Link>
         <Nav.Link
+          eventKey="/hosts"
           href="/hosts"
           className="navbar-header__link"
-          eventKey="/hosts"
         >
           Meet Your Hosts
         </Nav.Link>
         <Nav.Link
+          eventKey="/message"
           href="/message"
           className="navbar-header__link"
-          eventKey="/message"
         >
           Share Your Message
         </Nav.Link>
         <Nav.Link
+          eventKey="/contact"
           href="/contact"
           className="navbar-header__link"
-          eventKey="/contact"
         >
           Contact Us
         </Nav.Link>
         <Nav.Link
           id="subscribe"
-          className="btn btn-info subscribe-link "
+          className="btn btn-info subscribe-link"
           href="https://podcasts.apple.com/us/podcast/messages-from-a-bottle-podcast/id1340730783"
           target="_blank"
         >

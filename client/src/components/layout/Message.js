@@ -41,30 +41,32 @@ class Message extends React.Component {
   render() {
     const { message_list } = this.state;
     return (
-      <div className="container">
-        {message_list.length === 0 || message_list.length === undefined ? (
-          <Spinner></Spinner>
-        ) : (
-          <React.Fragment>
-            <Container>
-              <Jumbotron>
-                <h2>What's Your Message for the Bottle</h2>
-                <p>Leave us a message, share your thoughts here!</p>
-                <Button bsStyle="primary">Share Your Message</Button>
-              </Jumbotron>
-              <Row className="show-grid text-center">
-                {message_list.map((message) => {
-                  return (
-                    <SingleMessage
-                      key={message.id}
-                      message={message}
-                    ></SingleMessage>
-                  );
-                })}
-              </Row>
-            </Container>
-          </React.Fragment>
-        )}
+      <div style={{ paddingTop: "77px" }}>
+        <div className="container">
+          {message_list.length === 0 || message_list.length === undefined ? (
+            <Spinner></Spinner>
+          ) : (
+            <React.Fragment>
+              <Container>
+                <Jumbotron>
+                  <h2>What's Your Message for the Bottle</h2>
+                  <p>Leave us a message, share your thoughts here!</p>
+                  <Button bsStyle="primary">Share Your Message</Button>
+                </Jumbotron>
+                <Row className="show-grid text-center">
+                  {message_list.map((message) => {
+                    return (
+                      <SingleMessage
+                        key={message.id}
+                        message={message}
+                      ></SingleMessage>
+                    );
+                  })}
+                </Row>
+              </Container>
+            </React.Fragment>
+          )}
+        </div>
       </div>
     );
   }

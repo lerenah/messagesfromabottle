@@ -19,7 +19,7 @@ const TrackDetail = () => {
   }, [podcastId]);
 
   return (
-    <div style={{ marginTop: "20px" }}>
+    <div style={{ paddingTop: "100px" }}>
       <div className="container">
         <div className="col-md-6">
           <div className="card mb-5 shadow-sm">

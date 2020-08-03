@@ -3,7 +3,7 @@ import { Container, Col, Image, Row } from "react-bootstrap";
 // import Quotes from './Quotes';
 
 const Hosts = () => (
-  <div>
+  <div style={{ paddingTop: "77px" }}>
     <Image src="assets/hero1.png" className="header-image" />
     <Container style={{ marginTop: 5 }}>
       <Row>
