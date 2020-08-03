@@ -81,6 +81,56 @@ i.fa:hover {
   margin: 0 1em 1em 0;
 }
 
+.navbar-header {
+  background-color: rgb(79, 73, 137);
+  margin-bottom: 0;
+  z-index: 9;
+  width: 100vw;
+  padding-left: 10%;
+  padding-right: 7%;
+}
+
+.navbar-header__list {
+  justify-content: space-between;
+  float: none;
+  padding-left: 3.2%;
+}
+
+.navbar-header__toggle-button {
+  position: relative;
+  left: calc(100% - 11em);
+}
+
+.navbar-header__link {
+  color: #fbeec1;
+  padding: 1rem;
+}
+
+.subscribe-link {
+  color: #fff;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .navbar-header {
+    padding-left: 1%;
+    padding-right: 0;
+    justify-content: initial;
+  }
+
+  .navbar-header__list {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .navigation.navigation {
+    float: none;
+    display: inline-flex;
+  }
+}
+
 /*** FOOTER ***/
 .main-footer {
   height: "90vh";
