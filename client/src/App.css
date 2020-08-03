@@ -102,14 +102,14 @@ i.fa:hover {
 }
 
 .navbar-header__link {
-  color: #fbeec1;
-  padding: 1rem;
+  color: #fbeec1 !important;
+  padding: 1rem !important;
 }
 
 .subscribe-link {
-  color: #fff;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
+  color: #fff !important;
+  padding-left: 1.2rem !important;
+  padding-right: 1.2rem !important;
 }
 
 @media only screen and (max-width: 1024px) {
