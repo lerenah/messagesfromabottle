@@ -1,9 +1,9 @@
-import React from 'react';
-import axios from 'axios';
+import React from "react";
+import axios from "axios";
 
-import Tracks from '../tracks/Tracks';
-import SingleTrack from '../tracks/SingleTrack';
-import Quotes from './Quotes';
+import Tracks from "../tracks/Tracks";
+// import SingleTrack from "../tracks/SingleTrack";
+// import Quotes from "./Quotes";
 
 class Podcasts extends React.Component {
   constructor() {
@@ -15,11 +15,11 @@ class Podcasts extends React.Component {
 
   async componentDidMount() {
     try {
-      let { data } = await axios.get('/api/podcast');
-      console.log(data, ' is DATA');
+      let { data } = await axios.get("/api/podcast");
+      // console.log(data, " is DATA");
       this.setState({ podcast_list: data });
     } catch (err) {
-      console.log(err, ' is err');
+      console.log(err, " is err");
     }
   }
 
@@ -27,27 +27,32 @@ class Podcasts extends React.Component {
     return async () => {
       const { data } = await axios.get(`/api/podcast/${podcastId}`);
       this.setState({
-        selectedPodcast: data
+        selectedPodcast: data,
       });
     };
   }
   deselectPodcast() {
     this.setState({
-      selectedPodcast: {}
+      selectedPodcast: {},
     });
   }
 
   render() {
     return (
-      <React.Fragment>
-        {this.state.selectedPodcast.id ? (
-          <SingleTrack podcast={this.state.selectedPodcast}></SingleTrack>
-        ) : (
-          <React.Fragment>
-            <Tracks podcast_list={this.state.podcast_list}></Tracks>
-          </React.Fragment>
+      <div style={{ paddingTop: "77px" }}>
+        {this.state.podcast_list && (
+          <Tracks podcast_list={this.state.podcast_list} />
         )}
-      </React.Fragment>
+      </div>
+      // <React.Fragment>
+      //   {this.state.selectedPodcast.id ? (
+      //     <SingleTrack podcast={this.state.selectedPodcast}></SingleTrack>
+      //   ) : (
+      //     <React.Fragment>
+      //       <Tracks podcast_list={this.state.podcast_list}></Tracks>
+      //     </React.Fragment>
+      //   )}
+      // </React.Fragment>
     );
   }
 }

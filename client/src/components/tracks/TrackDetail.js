@@ -1,54 +1,58 @@
-import React from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router";
+import axios from "axios";
 
-class TrackDetail extends React.Component {
-  constructor() {
-    super();
-    this.state = { selectedPodcast: {} };
-  }
+const TrackDetail = () => {
+  const [selectedPodcast, setSelectedPodcast] = useState({});
+  let { podcastId } = useParams();
 
-  async componentDidMount(props) {
-    try {
-      const { data } = await axios.get(`/api/podcast/${this.props.match.params.podcastId}`);
-      console.log(data, ' DATA')
-      this.setState({
-        selectedPodcast: data
-      });
-    } catch (err) {
-      console.log(err, ' is err');
-    }
-  }
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { data } = await axios.get(`/api/podcast/${podcastId}`);
+        setSelectedPodcast(data);
+      } catch (err) {
+        console.log(err, " is err");
+      }
+    };
+    fetchData();
+  }, [podcastId]);
 
-  render(){
-    console.log('STATE:', this.state.selectedPodcast)
-    let {name, audioUrl, artworkUrl} = this.state.selectedPodcast;
-    return (
-    <div className='col-md-6'>
-      <div className='card mb-5 shadow-sm' style={{ width: '35vw' }}>
-        <div className='card-body'>
-          <p className='card-text'>
-            <h5 className='card-title'>
-              <strong>{name}</strong>
-            </h5>
-            <iframe
-              style={{ border: 'none' }}
-              src={`//html5-player.libsyn.com/embed/episode/id/${audioUrl}/height/360/theme/legacy/thumbnail/yes/direction/backward/`}
-              height='100'
-              width='100%'
-              scrolling='no'
-              allowfullscreen
-              webkitallowfullscreen
-              mozallowfullscreen
-              oallowfullscreen
-              msallowfullscreen
-            ></iframe>
-          </p>
-          <img src={artworkUrl} className='card-img-bottom' alt='pic' />
+  return (
+    <div style={{ paddingTop: "100px" }}>
+      <div className="container">
+        <div className="col-md-6">
+          <div className="card mb-5 shadow-sm">
+            <div className="card-body">
+              <p className="card-text">
+                <span className="card-title">
+                  <strong>{selectedPodcast.name}</strong>
+                </span>
+                <iframe
+                  title="podcast"
+                  style={{ border: "none" }}
+                  src={`//html5-player.libsyn.com/embed/episode/id/${selectedPodcast.audioUrl}/height/360/theme/legacy/thumbnail/yes/direction/backward/`}
+                  height="100"
+                  width="100%"
+                  scrolling="no"
+                  allowFullScreen
+                  webkitallowfullscreen="true"
+                  mozallowfullscreen="true"
+                  oallowfullscreen="true"
+                  msallowfullscreen="true"
+                ></iframe>
+              </p>
+              <img
+                src={selectedPodcast.artworkUrl}
+                className="card-img-bottom"
+                alt="pic"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    );
-  };
-  }
+  );
+};
 
 export default TrackDetail;
