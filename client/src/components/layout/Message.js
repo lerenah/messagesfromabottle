@@ -1,9 +1,9 @@
-import React from 'react';
-import axios from 'axios';
+import React from "react";
+import axios from "axios";
 
-import SingleMessage from './SingleMessage';
-import Spinner from './Spinner';
-import { Row, Button, Container, Jumbotron } from 'react-bootstrap';
+import SingleMessage from "./SingleMessage";
+import Spinner from "./Spinner";
+import { Row, Button, Container, Jumbotron } from "react-bootstrap";
 
 class Message extends React.Component {
   constructor() {
@@ -15,12 +15,12 @@ class Message extends React.Component {
 
   async componentDidMount() {
     try {
-      let { data } = await axios.get('/api/message');
-      console.log(data, ' is DATA');
+      let { data } = await axios.get("/api/message");
+      console.log(data, " is DATA");
       this.setState({ message_list: data });
-      console.log(this.state.message_list, ' is LIST');
+      console.log(this.state.message_list, " is LIST");
     } catch (err) {
-      console.log(err, ' is err');
+      console.log(err, " is err");
     }
   }
 
@@ -28,20 +28,20 @@ class Message extends React.Component {
     return async () => {
       const { data } = await axios.get(`/api/message/${messageId}`);
       this.setState({
-        selectedMessage: data
+        selectedMessage: data,
       });
     };
   }
   deselectMessage() {
     this.setState({
-      selectedMessage: {}
+      selectedMessage: {},
     });
   }
 
   render() {
     const { message_list } = this.state;
     return (
-      <div className='container'>
+      <div className="container">
         {message_list.length === 0 || message_list.length === undefined ? (
           <Spinner></Spinner>
         ) : (
@@ -50,10 +50,10 @@ class Message extends React.Component {
               <Jumbotron>
                 <h2>What's Your Message for the Bottle</h2>
                 <p>Leave us a message, share your thoughts here!</p>
-                <Button bsStyle='primary'>Share Your Message</Button>
+                <Button bsStyle="primary">Share Your Message</Button>
               </Jumbotron>
-              <Row className='show-grid text-center'>
-                {message_list.map(message => {
+              <Row className="show-grid text-center">
+                {message_list.map((message) => {
                   return (
                     <SingleMessage
                       key={message.id}
